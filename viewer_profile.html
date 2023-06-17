@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Assets/css/layout.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" href="Assets/image/logo.png" type="image/png">
+    <title>PetMatch</title>
+</head>
+<body>
+ <section style="display: flex; width: 100%; height: 100vh; justify-content: center; align-items: center;">
+    
+      <div class="area_mid_profile" style="border: 1px solid black; width: 500px; height: 700px;">
+        <div class="container">
+        <svg width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: relative; top:20px; left:110px;" >
+          <path d="M119.5 0C95.8652 0 72.7611 7.00855 53.1094 20.1394C33.4577 33.2702 18.1411 51.9335 9.09645 73.7693C0.0517756 95.6051 -2.31472 119.633 2.29621 142.813C6.90715 165.994 18.2884 187.287 35.0008 203.999C51.7132 220.712 73.006 232.093 96.1867 236.704C119.367 241.315 143.395 238.948 165.231 229.904C187.066 220.859 205.73 205.542 218.861 185.891C231.991 166.239 239 143.135 239 119.5C238.965 87.8173 226.364 57.4422 203.961 35.0392C181.558 12.6361 151.183 0.0347936 119.5 0ZM48.8397 203.652C55.9321 191.163 66.2078 180.777 78.6201 173.552C91.0324 166.327 105.138 162.52 119.5 162.52C133.862 162.52 147.968 166.327 160.38 173.552C172.792 180.777 183.068 191.163 190.16 203.652C170.382 220.306 145.357 229.44 119.5 229.44C93.6435 229.44 68.618 220.306 48.8397 203.652ZM197.378 197.02C185.503 177.167 166.466 162.624 144.189 156.39C154.547 150.881 162.765 142.067 167.536 131.35C172.307 120.632 173.356 108.627 170.518 97.2439C167.679 85.8611 161.115 75.7544 151.871 68.532C142.626 61.3096 131.231 57.3863 119.5 57.3863C107.769 57.3863 96.3741 61.3096 87.1294 68.532C77.8848 75.7544 71.321 85.8611 68.4824 97.2439C65.6439 108.627 66.6935 120.632 71.4645 131.35C76.2354 142.067 84.4535 150.881 94.8113 156.39C72.534 162.624 53.4967 177.167 41.6219 197.02C26.2858 181.629 15.8541 162.039 11.6439 140.723C7.43364 119.408 9.63374 97.3224 17.9664 77.2564C26.299 57.1904 40.3905 40.0433 58.4615 27.9803C76.5325 15.9174 97.7727 9.47941 119.5 9.47941C141.227 9.47941 162.468 15.9174 180.539 27.9803C198.61 40.0433 212.701 57.1904 221.034 77.2564C229.366 97.3224 231.566 119.408 227.356 140.723C223.146 162.039 212.714 181.629 197.378 197.02ZM119.5 152.96C110.991 152.96 102.674 150.437 95.5994 145.71C88.5248 140.983 83.0108 134.264 79.7547 126.403C76.4986 118.542 75.6467 109.892 77.3066 101.547C78.9666 93.2021 83.0639 85.5367 89.0803 79.5202C95.0968 73.5038 102.762 69.4065 111.107 67.7466C119.452 66.0867 128.102 66.9386 135.963 70.1947C143.824 73.4508 150.543 78.9647 155.27 86.0394C159.997 93.114 162.52 101.431 162.52 109.94C162.52 121.35 157.988 132.292 149.92 140.36C141.852 148.428 130.91 152.96 119.5 152.96Z" fill="black"/>
+          </svg><br><br><br><br>
+          <div class="text_profile" style="width: 100%;">
+          <h5><b>Nome</b>:</h5>
+          <h6 id="campo-nome">Fulano de tal</h6>
+
+          <h5><b>Endereço</b>:</h5>
+          <h6 id="campo-endereco">Rua a, bairro b</h6>
+
+          <h5><b>Gênero</b>:</h5>
+          <h6 id="campo-genero">Masculino</h6>
+
+          <h5><b>Data de nascimento</b>:</h5>
+          <h6 id="campo-nascimento">11/07/2003</h6>
+        </div><br><br>
+        <button onclick="window.location.href = 'home.html'" class="btn btn-primary" style="background-color:#0CC0DF; width:70%; padding: 10px; font-size: 20px; font-weight: 600; position: relative; left: 70px;" >Voltar</button>
+        </div>
+      </div>
+ </section>
+ <script>
+  function atualizarInfos() {
+    const nome = localStorage.getItem('Nome');
+    const endereco = localStorage.getItem('Endereco');
+    const genero = localStorage.getItem('Genero');
+    const nascimento = localStorage.getItem('Nascimento');
+    const campoNome = document.getElementById('campo-nome');
+    const campoEndereco = document.getElementById('campo-endereco');
+    const campoGenero = document.getElementById('campo-gereno');
+    const campoNascimento = document.getElementById('campo-nascimento');
+  
+    if (nome) {
+      // Se o nome do usuário estiver armazenado, exiba o texto "Olá, 'nome do usuário'"
+      campoNome.textContent = nome;
+      campoEndereco.textContent = endereco;
+      campoGenero.textContent = genero;
+      campoNascimento.textContent = nascimento;
+    }
+  }
+  
+  // Chame a função para atualizar o botão de login quando a página for carregada
+  window.addEventListener('DOMContentLoaded', atualizarInfos());
+</script>
+<script>
+  function verificarAutenticacao() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      // Redirecionar o usuário de volta para a página de login
+      window.location.href = 'index.html';
+    }
+  }
+
+  // Chamar a função de verificação ao carregar a página
+  window.addEventListener('DOMContentLoaded', verificarAutenticacao());
+</script>
+<script src="Assets/js/script.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>  
+</body>
+</html>
